@@ -1,42 +1,20 @@
-/*
- * Show a promo 'Free shipping' message on the cart page. 
- * In the example below, users will see a message on the cart page 
- * informing them that they will qualify for free shipping if their 
- * order is more than $99
- */
 
-var promoMessage = "Orders $99 and up ship free!";
-var minSubtotal = 99;
-var widgets;
-
-console.log("Custom Java Script");
-window.localStorage.setItem("show_ecwid_logs","true");
-
-// Calculating subtotal and displaying the message
-var checkSubtotal = function(order) {
-  if (order) {
-    var subtotal = order.total - order.shipping;
-    if (subtotal > minSubtotal) {
-      alert(promoMessage);
-    }  
-  }
-}
-
-// Detecting whether we're on the cart page and get the cart info
-Ecwid.OnPageLoaded.add(function(page) {
-  widgets = Ecwid.getInitializedWidgets();
-
-  // if storefront widget is present on this page
-  for (i = 0; i < widgets.length ; i++) {
-    if (widgets[i] == "ProductBrowser") {
-      if ('CART' == page.type) {
-        Ecwid.Cart.calculateTotal(function(order) {
-          checkSubtotal(order);
-        });
-      }
-    }
-  }
-});
 
 // Get color value for the message and store it in color variable
-var color = Ecwid.getAppPublicConfig(20915081);
+//var color = Ecwid.getAppPublicConfig(20915081);
+
+// Initialize extra fields
+ec.order = ec.order || {};
+ec.order.extraFields = ec.order.extraFields || {};
+
+// Add a new optional text input 'How should we sign the package?' to shipping address form
+ec.order.extraFields.wrapping_box_signature = {
+    'title': 'How should we sign the package?',
+    'textPlaceholder': 'Package sign',
+    'type': 'text',
+    'tip': 'We will put a label on a box so the recipient knows who it is from',
+    'required': false,
+    'checkoutDisplaySection': 'shipping_address'
+};
+
+Ecwid.refreshConfig();
