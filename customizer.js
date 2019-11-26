@@ -93,6 +93,7 @@ var checkSubtotal = function(order) {
 // Detecting whether we're on the cart page and get the cart info
 Ecwid.OnPageLoaded.add(function(page) {
   widgets = Ecwid.getInitializedWidgets();
+  console.log(widgets);
 
   // if storefront widget is present on this page
   for (i = 0; i < widgets.length ; i++) {
