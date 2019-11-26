@@ -15,7 +15,7 @@ ec.order.extraFields.wrapping_box_signature = {
     'checkoutDisplaySection': 'shipping_address'
 };
 
-ec.refreshConfig();
+
 
 // Add button below each product in grid.
 
