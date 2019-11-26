@@ -36,4 +36,4 @@ Ecwid.OnPageLoaded.add(function(page) {
 });
 
 // Get color value for the message and store it in color variable
-var color = Ecwid.getAppPublicConfig(appId);
+var color = Ecwid.getAppPublicConfig(20915081);
