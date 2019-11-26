@@ -63,7 +63,7 @@ Ecwid.OnPageLoaded.add(function (page) {
             });
 
             // Add new element to products
-            elem.appendChild(container);
+            //elem.appendChild(container);
           }
         }
 });
