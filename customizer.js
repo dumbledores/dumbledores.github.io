@@ -19,7 +19,7 @@ ec.order.extraFields.wrapping_box_signature = {
 Ecwid.OnPageLoaded.add(function(page){
   console.log("dumbledores - Current page is of type: " + page.type);
   if(page.type == 'PRODUCT'){
-    console.log("Product ID is:" +product.id);
+    console.log(product);
     }
 });
 
