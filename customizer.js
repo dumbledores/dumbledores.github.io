@@ -9,6 +9,8 @@ var promoMessage = "Orders $99 and up ship free!";
 var minSubtotal = 99;
 var widgets;
 
+console.log("Custom Java Script");
+
 // Calculating subtotal and displaying the message
 var checkSubtotal = function(order) {
   if (order) {
