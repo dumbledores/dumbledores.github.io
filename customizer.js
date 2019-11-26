@@ -15,6 +15,10 @@ ec.order.extraFields.wrapping_box_signature = {
     'checkoutDisplaySection': 'shipping_address'
 };
 
+//display page type
+Ecwid.OnPageLoaded.add(function(page){
+  console.log("dumbledores - Current page is of type: " + page.type);
+});
 
 
 // Add button below each product in grid.
