@@ -10,6 +10,7 @@ var minSubtotal = 99;
 var widgets;
 
 console.log("Custom Java Script");
+window.localStorage.setItem("show_ecwid_logs","true");
 
 // Calculating subtotal and displaying the message
 var checkSubtotal = function(order) {
