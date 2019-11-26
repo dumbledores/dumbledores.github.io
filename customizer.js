@@ -15,4 +15,10 @@ ec.order.extraFields.wrapping_box_signature = {
     'checkoutDisplaySection': 'shipping_address'
 };
 
-Ecwid.refreshConfig();
+ec.refreshConfig();
+
+<#list order.extraFields as extraField>
+    <#if extraField.title?has_content && extraField.orderDisplaySection?has_content>
+        ${extraField.title}: ${extraField.value}
+    </#if>
+</#list>
