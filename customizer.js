@@ -19,7 +19,7 @@ ec.order.extraFields.wrapping_box_signature = {
 Ecwid.OnPageLoaded.add(function(page){
   console.log("dumbledores - Current page is of type: " + page.type);
   if(page.type == 'PRODUCT'){
-    console.log(product);
+   
     }
 });
 
@@ -63,7 +63,7 @@ Ecwid.OnPageLoaded.add(function (page) {
             });
 
             // Add new element to products
-            //elem.appendChild(container);
+            elem.appendChild(container);
           }
         }
 });
