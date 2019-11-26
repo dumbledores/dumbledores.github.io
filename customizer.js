@@ -1,7 +1,5 @@
-
-
-// Get color value for the message and store it in color variable
-//var color = Ecwid.getAppPublicConfig(20915081);
+//Store - 20915081;
+window.localStorage.setItem("show_ecwid_logs","true");
 
 // Initialize extra fields
 ec.order = ec.order || {};
