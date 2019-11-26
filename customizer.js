@@ -1,5 +1,5 @@
 //Store - 20915081;
-window.localStorage.setItem("show_ecwid_logs","true");
+//window.localStorage.setItem("show_ecwid_logs","true");
 
 // Initialize extra fields
 ec.order = ec.order || {};
@@ -18,7 +18,7 @@ ec.order.extraFields.wrapping_box_signature = {
 
 
 // Add button below each product in grid.
-
+console.log("Add button below each product");
 Ecwid.OnPageLoaded.add(function (page) {
         // Apply changes only to category pages
         if (page.type == 'CATEGORY') {
@@ -33,7 +33,7 @@ Ecwid.OnPageLoaded.add(function (page) {
           // Loop to add new element to each product in product listing
           for (i = 0; i < document.querySelectorAll('.grid-product').length; i++) {
             var elem = document.querySelector('.grid-product:nth-child(' + (i + 1) + ') .grid-product__wrap-inner');
-
+            console.log(elem);
             // Create our custom element
             var container = document.createElement("div");
 
